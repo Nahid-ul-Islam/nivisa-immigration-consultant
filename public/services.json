@@ -1,0 +1,23 @@
+[
+    {
+      "id": "625c590d3f322c5fb2c5f01f",
+      "image": "/Services/education.PNG",
+      "name": "Education Visa",
+      "price": "$600",
+      "about": "The most important thing about your student visa application is that you get it done well in advance of when you plan to leave your home country. In some cases the process can take up to six months, or even longer for visa applications with missing information, so it’s advisable to start as soon as you gain acceptance onto a study abroad program.\r\n"
+    },
+    {
+      "id": "625c590d53f704060eb83bf8",
+      "image": "/Services/business.PNG",
+      "name": "Business Visa",
+      "price": "$1000",
+      "about": "The benefit of the Business visa is that you can develop business relationships and visit the US as many times for business. After your visa expires, you can always apply for another one. The US business visas do not have a cap so there are no rules as to how many visas can be issued per year. The US has created the US visitor visas to cover business.\r\n"
+    },
+    {
+      "id": "625c590d3c5205761efe438d",
+      "image": "/Services/family.PNG",
+      "name": "Family Visa",
+      "price": "$1200",
+      "about": "The minimum time to process the application for a visa for family reunion takes approx. 14 years, since your application has to be forwarded to the competent immigration authorities in USA for final approval.Please be aware that in most cases document verification is requested. The process of verification takes between eight to ten weeks. \r\n"
+    }
+  ]
