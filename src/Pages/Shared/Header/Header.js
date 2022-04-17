@@ -6,7 +6,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-            <nav className="bg-stone-200 pb-1">
+            <nav className="bg-white pb-1 sticky top-0">
                 <div className="lg:mx-36 mx-auto pr-4 lg:px-0">
                     <div className="flex items-center justify-between h-16">
 
@@ -27,35 +27,35 @@ const Header = () => {
                             <div className="ml-10 flex items-baseline space-x-4">
                                 <NavLink
                                     to="#"
-                                    className=" hover:bg-stone-400 text-black text-xl px-3 py-2 rounded-md text-sm font-medium"
+                                    className=" hover:bg-stone-400 text-black text-xl px-3 py-2 rounded-md text-xl font-medium"
                                 >
                                     Home
                                 </NavLink>
 
                                 <NavLink
                                     to="#"
-                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-sm font-medium"
+                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                                 >
                                     Services
                                 </NavLink>
 
                                 <NavLink
                                     to="#"
-                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-sm font-medium"
+                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                                 >
                                    Country
                                 </NavLink>
 
                                 <NavLink
                                     to="#"
-                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-sm font-medium"
+                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                                 >
                                     Blogs
                                 </NavLink>
 
                                 <NavLink
                                     to="#"
-                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-sm font-medium"
+                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                                 >
                                     About Us
                                 </NavLink>
@@ -111,7 +111,7 @@ const Header = () => {
 
 
                 {isOpen && (
-                    <div className="md:hidden" id="mobile-menu">
+                    <div className="md:hidden transition-top duration-500 ease-in-out" id="mobile-menu">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <NavLink
                                 to="#"
