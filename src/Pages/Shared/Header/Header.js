@@ -6,7 +6,6 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div>
             <nav className="bg-stone-200 pb-1">
                 <div className="lg:mx-36 mx-auto pr-4 lg:px-0">
                     <div className="flex items-center justify-between h-16">
@@ -19,7 +18,7 @@ const Header = () => {
                                         src={logo}
                                         alt="Workflow"
                                     />
-                                    <h2 className="text-black text-xl font-medium lg:pl-5">LIVIZA</h2>
+                                    <h2 className="text-black text-xl font-medium lg:pl-5">NIVIZA</h2>
                                 </div>
                             </NavLink>
 
@@ -67,7 +66,7 @@ const Header = () => {
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
-                                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400  text-xl hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                className="bg-gray-300 inline-flex items-center justify-center p-2 rounded-md text-gray-800  text-xl hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                                 aria-controls="mobile-menu"
                                 aria-expanded="false"
                             >
@@ -151,9 +150,7 @@ const Header = () => {
                         </div>
                     </div>
                 )}
-
             </nav>
-        </div>
     );
 };
 
