@@ -4,6 +4,7 @@ import logo from '../../../Images/Icon/logo.png';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import auth from '../../../firebase.init';
+import './Header.css';
 
 const Header = () => {
 
