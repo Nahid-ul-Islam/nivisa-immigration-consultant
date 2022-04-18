@@ -60,7 +60,7 @@ const Header = () => {
                                 to="#"
                                 className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                             >
-                                About Us
+                                About Me
                             </NavLink>
 
                             <div>
@@ -158,7 +158,7 @@ const Header = () => {
                             to="#"
                             className="text-decoration-none text-black hover:bg-stone-400  text-xl block px-3 py-2 rounded-md font-medium"
                         >
-                            About Us
+                            About Me
                         </NavLink>
 
                         <div>
