@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='bg-gray-800 text-white'>
+        <div className='md:mt-40 bg-gray-800 text-white'>
             <div className='grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-auto pt-10 '>
                 <div className='flex flex-col items-center'>
                     <div className='ml-10 md:ml-0'>

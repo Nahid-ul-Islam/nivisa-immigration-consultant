@@ -50,14 +50,14 @@ const Header = () => {
                             </NavLink>
 
                             <NavLink
-                                to="#"
+                                to="blogs"
                                 className="text-decoration-none text-black hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                             >
                                 Blogs
                             </NavLink>
 
                             <NavLink
-                                to="#"
+                                to="/aboutme"
                                 className="text-decoration-none text-black hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                             >
                                 About Me
@@ -148,14 +148,14 @@ const Header = () => {
                         </NavLink>
 
                         <NavLink
-                            to="#"
+                            to="blogs"
                             className="text-decoration-none text-black text-xl hover:bg-stone-400 block px-3 py-2 rounded-md font-medium"
                         >
                             Blogs
                         </NavLink>
 
                         <NavLink
-                            to="#"
+                            to="aboutme"
                             className="text-decoration-none text-black hover:bg-stone-400  text-xl block px-3 py-2 rounded-md font-medium"
                         >
                             About Me
