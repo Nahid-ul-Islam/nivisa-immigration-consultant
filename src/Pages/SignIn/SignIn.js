@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 import './SignIn.css';
 
@@ -43,6 +45,10 @@ const SignIn = () => {
         const email = emailRef.current.value;
         if(email) {
             await sendPasswordResetEmail(email);
+            toast('Email Sent');
+        }
+        else{
+            toast("Please enter your email");
         }
     }
 
@@ -88,6 +94,7 @@ const SignIn = () => {
                 
                 {errorElement}
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
