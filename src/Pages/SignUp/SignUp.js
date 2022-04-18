@@ -47,14 +47,14 @@ const SignUp = () => {
                     </div>
                     <div className="flex items-center justify-center">
 
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        <button className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                             <input type="submit" value="SignUp"></input>
                         </button>
                         
 
                     </div>
                     <Link to="/signin">
-                            <p className=" ml-9 pt-3 align-baseline font-bold text-md text-blue-500 hover:text-blue-800 cursor-pointer">Already have an account?</p>
+                            <p className=" ml-9 pt-3 align-baseline font-bold text-md text-blue-700 hover:text-blue-500 cursor-pointer">Already have an account?</p>
                     </Link>
                 </form>
                 
