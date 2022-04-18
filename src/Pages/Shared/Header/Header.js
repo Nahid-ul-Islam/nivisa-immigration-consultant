@@ -135,38 +135,54 @@ const Header = () => {
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         <NavLink
                             to="/home"
-                            className="text-decoration-none hover:bg-stone-400 text-black text-xl block px-3 py-2 rounded-md text-base font-medium"
+                            className="text-decoration-none hover:bg-stone-400 text-black text-xl block px-3 py-2 rounded-md font-medium"
                         >
                             Home
                         </NavLink>
 
                         <NavLink
                             to="/services"
-                            className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
+                            className="text-decoration-none text-black text-xl hover:bg-stone-400 block px-3 py-2 rounded-md font-medium"
                         >
                             Services
                         </NavLink>
 
                         <NavLink
                             to="#"
-                            className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
+                            className="text-decoration-none text-black text-xl hover:bg-stone-400 block px-3 py-2 rounded-md font-medium"
                         >
                             Blogs
                         </NavLink>
 
                         <NavLink
                             to="#"
-                            className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
+                            className="text-decoration-none text-black hover:bg-stone-400  text-xl block px-3 py-2 rounded-md font-medium"
                         >
                             About Us
                         </NavLink>
 
-                        <NavLink
+                        <div>
+                                {
+                                    user ?
+                                        <button onClick={handleSignOut} className='text-decoration-none text-black hover:bg-stone-400  text-xl block px-3 py-2 rounded-md font-medium'>
+                                            Sign Out
+                                        </button>
+                                        :
+                                        <NavLink
+                                            to="/signin"
+                                            className="text-decoration-none text-black text-xl hover:bg-stone-400 px-3 py-2 rounded-md text-medium font-medium"
+                                        >
+                                            Login
+                                        </NavLink>
+                                }
+                            </div>
+
+                        {/* <NavLink
                             to="/signin"
                             className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
                         >
                             Login
-                        </NavLink>
+                        </NavLink> */}
                     </div>
                 </div>
             )}

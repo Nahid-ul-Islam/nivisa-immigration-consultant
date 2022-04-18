@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,7 +12,9 @@ const SignIn = () => {
 
     let errorElement;
     const emailRef = useRef('');
-    const navigate = useNavigate();
+     const location =useLocation();
+     const navigate = useNavigate();
+     let from = location.state?.from?.pathname || "/";
 
     const [
         signInWithEmailAndPassword,
@@ -24,7 +26,7 @@ const SignIn = () => {
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     if (user) {
-        console.log(user);
+         navigate(from,{replace:true});
     }
 
     if (loading || sending) {
@@ -40,7 +42,6 @@ const SignIn = () => {
         const password = event.target.password.value;
 
         signInWithEmailAndPassword(email, password);
-        navigate('/home');
     }
 
     const forgetPassword = async () => {
@@ -56,7 +57,7 @@ const SignIn = () => {
 
     return (
         <div>
-            <h2 className='text-center mt-24'>Login</h2>
+            <h2 className='text-center md:mt-24'>Login</h2>
             <div className="w-full mx-auto max-w-xs">
                 <form onSubmit={handleSignin} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <div className="mb-4">

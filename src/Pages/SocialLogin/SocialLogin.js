@@ -27,7 +27,7 @@ const SocialLogin = () => {
     return (
         <div>
             {errorElement}
-            <div className='flex justify-center'>
+            <div className='flex justify-center mb-5 md:mb-0'>
                 
                 <button onClick={() => signInWithGoogle()} className="flex items-center  bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"> <img src={google} alt="" srcset="" />
                    <p className='mb-0 ml-5'>Google Sign In</p> 
