@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-
+import './SignIn.css';
 
 
 const SignIn = () => {
+
+    let errorElement;
+    const emailRef = useRef('');
 
     const [
         signInWithEmailAndPassword,
@@ -14,16 +17,33 @@ const SignIn = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
     if(user){
         console.log(user);
+    }
+
+    if(loading || sending){
+        return <div className='text-center mt-10'>loading...</div>
+    }
+    if(error) {
+        errorElement = <p className='text-red-600'>Error: {error?.message}</p>
     }
 
     const handleSignin = event => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
+        console.log(email);
 
         signInWithEmailAndPassword(email, password);
+    }
+
+    const forgetPassword = async () => {
+        const email = emailRef.current.value;
+        if(email) {
+            await sendPasswordResetEmail(email);
+        }
     }
 
     return (
@@ -35,30 +55,38 @@ const SignIn = () => {
                         <label className="block text-gray-700 text-sm font-bold mb-2">
                             Email
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" placeholder="email"/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" ref={emailRef} placeholder="email"required/>
                     </div>
                     <div className="mb-6">
                         <label className="block text-gray-700 text-sm font-bold mb-2">
                             Password
                         </label>
-                        <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" placeholder="******"/>
+                        <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" placeholder="******" required/>
                             
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-center">
                         
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                             <input type="submit" value="Login"></input>
-                        </button>
-                       
-                        <Link to="/signup">
-                        <p className='font-bold text-md mt-2 mr-4 text-blue-500 hover:text-blue-800 cursor-pointer'>New to LIVISA? </p>    
-                        </Link> 
+                        </button> 
                         
                     </div>
-                    <div>
-                         {/* <p className=" ml-6 pt-3 inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 cursor-pointer">Forget Password <Link to="/login"></Link> </p> */}
+                    <div className='flex justify-center mt-3 pl-5'>
+                    <Link to="/signup">
+                        <p className='font-bold text-md mt-2 mr-4 text-blue-500 hover:text-blue-800 cursor-pointer'>New to LIVISA? </p>    
+                        </Link>
                     </div>
+                    
+                    
                 </form>
+                <div className='flex justify-center ml-5 margin-top'>
+                    
+                    <button onClick={forgetPassword} className="font-bold text-md mr-4 text-blue-500 hover:text-blue-800 cursor-pointer">Forget Password</button>
+                    
+                         
+                    </div>
+                
+                {errorElement}
             </div>
         </div>
     );
