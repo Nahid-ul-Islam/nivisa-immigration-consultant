@@ -3,7 +3,7 @@ import consultant from '../../../Images/consultant.jpg';
 
 const About = () => {
     return (
-        <div className='md:flex md:ml-32 md:mt-52 mt-20'>
+        <div className='lg:flex md:ml-32 md:mt-52 mt-20'>
             <div className='rounded-full flex justify-center mb-4'>
                 <img className='rounded-full w-2/5 md:w-3/5' src={consultant} alt="" />
             </div>

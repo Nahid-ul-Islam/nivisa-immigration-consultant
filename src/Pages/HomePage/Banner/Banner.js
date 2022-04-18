@@ -27,7 +27,7 @@ const Banner = () => {
         slideRef.current.addEventListener('animationend', removeAnimation);
 
 
-        //startSlider();
+        startSlider();
         return () => {
             pauseSlider();
         }

@@ -16,7 +16,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-white pb-1 sticky top-0">
+        <nav className="bg-white pb-1 sticky top-0 lg:mx-32">
             <div className="lg:mx-36 mx-auto pr-4 lg:px-0">
                 <div className="flex items-center justify-between h-16">
 
@@ -35,30 +35,30 @@ const Header = () => {
                     </div>
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
-                            <NavLink
+                            <NavLink 
                                 to="/home"
-                                className="text-decoration-none hover:bg-stone-400 text-black text-xl px-3 py-2 rounded-md text-xl font-medium"
+                                className="text-decoration-none hover:bg-stone-400 text-black text-xl px-3 py-2 rounded-md  font-medium"
                             >
                                 Home
                             </NavLink>
 
                             <NavLink
                                 to="/services"
-                                className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
+                                className="text-decoration-none text-black  hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                             >
                                 Services
                             </NavLink>
 
                             <NavLink
                                 to="#"
-                                className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
+                                className="text-decoration-none text-black hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                             >
                                 Blogs
                             </NavLink>
 
                             <NavLink
                                 to="#"
-                                className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
+                                className="text-decoration-none text-black hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                             >
                                 About Me
                             </NavLink>
@@ -176,13 +176,6 @@ const Header = () => {
                                         </NavLink>
                                 }
                             </div>
-
-                        {/* <NavLink
-                            to="/signin"
-                            className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            Login
-                        </NavLink> */}
                     </div>
                 </div>
             )}

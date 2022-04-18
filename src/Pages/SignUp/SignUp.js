@@ -2,6 +2,7 @@ import React from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const SignUp = () => {
     let errorElement;
@@ -32,7 +33,7 @@ const SignUp = () => {
     return (
         <div>
             <h2 className='text-center mt-24'>Sign Up</h2>
-            <div className="w-full mx-auto max-w-xs">
+            <div className="w-full mx-auto max-w-md">
                 <form onSubmit={handleSignup} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -62,11 +63,17 @@ const SignUp = () => {
                         
 
                     </div>
+                    <div className='flex justify-center'>
                     <Link to="/signin">
-                            <p className=" ml-9 pt-3 align-baseline font-bold text-md text-blue-700 hover:text-blue-500 cursor-pointer">Already have an account?</p>
+                            <p className="pt-3 align-baseline font-bold text-md text-blue-700 hover:text-blue-500 cursor-pointer">Already have an account?</p>
                     </Link>
+                    </div>
+                    
                 </form>
                 
+            </div>
+            <div className='text-center mt-10'>
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     );
