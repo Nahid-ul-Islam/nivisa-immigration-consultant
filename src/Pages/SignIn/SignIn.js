@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,6 +12,7 @@ const SignIn = () => {
 
     let errorElement;
     const emailRef = useRef('');
+    const navigate = useNavigate();
 
     const [
         signInWithEmailAndPassword,
@@ -37,9 +38,9 @@ const SignIn = () => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        console.log(email);
 
         signInWithEmailAndPassword(email, password);
+        navigate('/home');
     }
 
     const forgetPassword = async () => {

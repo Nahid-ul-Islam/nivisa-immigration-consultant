@@ -4,12 +4,20 @@ import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const SignUp = () => {
+    let errorElement;
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+
+    if (loading) {
+        return <div className='text-center mt-10'>loading...</div>
+    }
+    if (error) {
+        errorElement = <p className='text-red-600'>Error: {error?.message}</p>
+    }
 
     const handleSignup = event => {
         event.preventDefault();
@@ -45,6 +53,7 @@ const SignUp = () => {
                         <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" placeholder="******************" required />
                 
                     </div>
+                    {errorElement}
                     <div className="flex items-center justify-center">
 
                         <button className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
