@@ -11,7 +11,7 @@ const Header = () => {
                     <div className="flex items-center justify-between h-16">
 
                         <div className="flex-shrink-0">
-                            <NavLink to="#">
+                            <NavLink to="/home" className="text-decoration-none">
                                 <div className="flex items-center">
                                     <img
                                         className="h-14 w-14 lg:h-20 lg:w-20"
@@ -26,38 +26,38 @@ const Header = () => {
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
                                 <NavLink
-                                    to="#"
-                                    className=" hover:bg-stone-400 text-black text-xl px-3 py-2 rounded-md text-xl font-medium"
+                                    to="/home"
+                                    className="text-decoration-none hover:bg-stone-400 text-black text-xl px-3 py-2 rounded-md text-xl font-medium"
                                 >
                                     Home
                                 </NavLink>
 
                                 <NavLink
-                                    to="#"
-                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
+                                    to="/services"
+                                    className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                                 >
                                     Services
                                 </NavLink>
 
                                 <NavLink
                                     to="#"
-                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
-                                >
-                                   Country
-                                </NavLink>
-
-                                <NavLink
-                                    to="#"
-                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
+                                    className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                                 >
                                     Blogs
                                 </NavLink>
 
                                 <NavLink
                                     to="#"
-                                    className="text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
+                                    className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
                                 >
                                     About Us
+                                </NavLink>
+
+                                <NavLink
+                                    to="/signin"
+                                    className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl px-3 py-2 rounded-md text-medium font-medium"
+                                >
+                                   Login
                                 </NavLink>
                             </div>
                         </div>
@@ -114,38 +114,38 @@ const Header = () => {
                     <div className="md:hidden transition-top duration-500 ease-in-out" id="mobile-menu">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <NavLink
-                                to="#"
-                                className="hover:bg-stone-400 text-black text-xl block px-3 py-2 rounded-md text-base font-medium"
+                                to="/home"
+                                className="text-decoration-none hover:bg-stone-400 text-black text-xl block px-3 py-2 rounded-md text-base font-medium"
                             >
                                 Home
                             </NavLink>
 
                             <NavLink
-                                to="#"
-                                className="text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
+                                to="/services"
+                                className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
                             >
                                 Services
                             </NavLink>
 
                             <NavLink
                                 to="#"
-                                className="text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
+                                className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
                             >
-                               Country
+                               Blogs
                             </NavLink>
 
                             <NavLink
                                 to="#"
-                                className="text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
-                            >
-                                Blogs
-                            </NavLink>
-
-                            <NavLink
-                                to="#"
-                                className="text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
+                                className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
                             >
                                 About Us
+                            </NavLink>
+
+                            <NavLink
+                                to="/signin"
+                                className="text-decoration-none text-black text-xl hover:bg-stone-400  text-xl block px-3 py-2 rounded-md text-base font-medium"
+                            >
+                                Login
                             </NavLink>
                         </div>
                     </div>
